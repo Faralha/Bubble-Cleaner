@@ -16,6 +16,12 @@ Bubble Cleaner for manga using the YOLOv11-segmented model, optimized for faster
 
 ![H-010_debug_grid2](https://github.com/user-attachments/assets/495a8bc0-008f-4a75-af25-1d49496bc9cc)
 
+## Training Model
+
+
+## To-Do List
+- Increase Dataset Variations
+- Improve Post-processing, especially for joined bubble
 
 ## Run Locally
 
