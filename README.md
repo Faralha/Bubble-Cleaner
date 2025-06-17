@@ -35,7 +35,7 @@ Hasil Akhir
 
 | iterasi epoch | train/box_loss | train/seg_loss | metrics/precision(B) | metrics/recall(B) | metrics/mAP50(B) | metrics/mAP50(M) |
 | :----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
-| 54 | 0.2383 | 0.28144 | 0.86595 | 0.82864 | 0.82972 |
+| 54 | 0.2383 | 0.28144 | 0.86595 | 0.80737 | 0.82864 | 0.82972 |
 
 Untuk hasil iterasi epochs secara lengkap dapat melihat pada link ini: https://drive.google.com/file/d/1lJIBTGtpXOicD8E6ZnQcW2NUkYRSgfY4/view?usp=drive_link
 
@@ -48,7 +48,7 @@ Untuk hasil iterasi epochs secara lengkap dapat melihat pada link ini: https://d
 Clone the project
 
 ```bash
-  git clone https://github.com/faralha/bubble-cleaner.git
+  git clone https://github.com/faralha/Bubble-Cleaner.git
 ```
 
 Go to the project directory
