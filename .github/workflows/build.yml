@@ -1,0 +1,40 @@
+name: Build Manga Cleaner EXE
+
+# Memicu workflow setiap kali ada push ke branch 'main'
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-windows:
+    # Menggunakan mesin virtual Windows terbaru yang disediakan GitHub
+    runs-on: windows-latest
+
+    steps:
+      # 1. Mengunduh kode dari repositori Anda ke mesin virtual
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Menyiapkan Python versi 3.9
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      # 3. Menginstal semua dependensi, termasuk PyTorch versi CPU-only
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install ultralytics opencv-python numpy pyinstaller
+
+      # 4. Menjalankan PyInstaller untuk membuat satu file .exe
+      - name: Build with PyInstaller
+        run: pyinstaller --onefile process_manga.py
+
+      # 5. Mengunggah file .exe dari folder dist sebagai artifact
+      - name: Upload EXE Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: manga-cleaner-exe
+          path: dist/process_manga.exe
