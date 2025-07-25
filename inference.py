@@ -8,9 +8,18 @@ from ultralytics import YOLO
 # KONFIGURASI
 # ==============================================================================
 
-# Path ke file model. Ubah jika perlu.
-# Diasumsikan file 'best.pt' berada di folder yang sama dengan skrip ini.
-MODEL_PATH = 'best.pt'
+def resource_path(relative_path):
+    """ Mendapatkan path absolut ke resource, berfungsi untuk mode dev dan PyInstaller """
+    try:
+        # PyInstaller membuat folder sementara dan menyimpan path-nya di _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+# Path ke file model. Sekarang menggunakan fungsi resource_path.
+MODEL_PATH = resource_path('best.pt')
 
 # Parameter untuk proses masking
 MIN_CONFIDENCE = 0.65 # Ambang batas kepercayaan deteksi

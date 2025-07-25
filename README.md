@@ -4,6 +4,33 @@
 Bubble Cleaner untuk manga menggunakan model YOLOv11-segmented, untuk inferensi yang lebih cepat dan ringan, selagi mempertahankan akurasi deteksi yang tinggi. GPU tidak diperlukan (CPU saja cukup!).
 
 Bubble Cleaner for manga using the YOLOv11-segmented model, optimized for faster and lighter inference while maintaining high detection accuracy. A GPU isn't needed (Just CPU is enough!).
+
+## Usage
+
+Untuk pemakaian, silakan download versi yang sudah di-Compile untuk CPU-only (Windows, .exe) di halaman [Release.](https://github.com/Faralha/Bubble-Cleaner/releases) Download file .zip dibawah asset, ekstrak, lalu jalankan exe. Tunggu hingga teks yang meminta memasukkan input path muncul.
+
+For usage, please download the pre-compiled CPU-only version (Windows, .exe) from the [Release Page.](https://github.com/Faralha/Bubble-Cleaner/releases) Download the .zip file under the "Assets" section, extract it, and then run the .exe. Wait for the prompt asking for the input path to appear.
+
+![Tampilan Aplikasi](./assets/inference.png)
+
+### Usage Example
+
+1. Create input and output directory.
+
+2. Run program.
+
+3. Enter input and output directory, and the Manga Panel to be processed.
+
+4. Wait until finished, done.
+
+![Usage Example](./assets/example.png)
+
+
+### Note
+
+This model isn't fully optimized for bubble detection and refining, so use it with a grain of salt. Unaccuracy is expected, so use it just as a helper, not to remove Cleaner role entirely.
+
+
 ## Class Detection Features
 
 - Ellipse / Bubble default
